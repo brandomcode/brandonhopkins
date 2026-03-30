@@ -247,6 +247,11 @@ function getContentHTML(id) {
 
 function setActive(id, isMobile) {
   activeId = id;
+
+  // Swap favicon
+  const favicon = document.getElementById('favicon');
+  favicon.href = id === 'keyboard-study-1' ? 'keyboard-study-1.png' : 'favicon.png';
+
   document.getElementById('desktopNav').innerHTML = buildNavHTML(false);
   document.getElementById('rightColInner').innerHTML = getContentHTML(id);
   attachNavEvents(false);
