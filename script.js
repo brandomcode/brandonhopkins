@@ -26,7 +26,7 @@ const data = {
       title: "Keyboard Study No. 1",
       subtitle: null,
       type: "Single",
-      date: "28 March 2026",
+      date: "29 March 2026",
       totalDuration: "00:42",
       image: "keyboard-study-1.png",
       tracklist: [
