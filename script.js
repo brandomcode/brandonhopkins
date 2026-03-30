@@ -1,8 +1,8 @@
 const data = {
   about: {
     bio: [
-      "Brandon Hopkins (b. 1997) is a British composer based in London, England. Self-taught from the age of twelve, his work has been featured in film, video games, and advertising, with recent performances at the London Festival of Contemporary Church Music. He is signed to both Music Vine and Uppbeat.",
-      "His work explores the evolution of classical music in the digital age through contemporary tools and experimental processes."
+      "Brandon Hopkins (b. 1997) is a British composer based in London, England. Self-taught from the age of twelve, his work has been featured in film, video games, and advertising, with recent performances at the London Festival of Contemporary Church Music.",
+      "Drawing on the lineage of John Cage, Steve Reich, and Philip Glass, his work explores how classical music evolves in the digital age through contemporary tools and experimental processes."
     ],
     listen: [
       { label: "Spotify", url: "https://open.spotify.com/artist/6C8OQhTzwo2d9NkJ99exZE" },
