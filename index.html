@@ -1,13 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brandon Hopkins</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
+  <!-- MOBILE HEADER -->
+  <header class="mobile-header">
+    <span class="mobile-title">Brandon Hopkins</span>
+    <button class="menu-btn" id="menuBtn">Menu</button>
+  </header>
+
+  <!-- MOBILE MENU OVERLAY -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <span class="mobile-title">Brandon Hopkins</span>
+      <button class="menu-btn" id="closeBtn">Close</button>
+    </div>
+    <nav id="mobileNav"></nav>
+  </div>
+
+  <!-- MOBILE CONTENT -->
+  <main class="mobile-content active" id="mobileContent"></main>
+
+  <!-- DESKTOP LAYOUT -->
+  <div class="layout">
+    <div class="col" id="leftCol">
+      <div class="col-inner">
+        <h1 class="site-title">Brandon Hopkins</h1>
+        <nav id="desktopNav"></nav>
+      </div>
+    </div>
+    <div class="col" id="rightCol">
+      <div class="col-inner" id="rightColInner"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
