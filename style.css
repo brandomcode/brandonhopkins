@@ -110,7 +110,7 @@ html, body {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: var(--spacing-lg);
-  letter-spacing: -0.01em;
+  padding-bottom: 2rem;
 }
 
 /* ── LEFT NAV ── */
@@ -176,6 +176,7 @@ html, body {
   font-family: 'Helvetica Now Display', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 1.5rem;
   font-weight: 400;
+  padding-bottom: 2rem;
   margin-bottom: var(--spacing-lg);
 }
 
@@ -324,6 +325,7 @@ html, body {
 .mobile-menu nav {
   margin-top: 133px;
   padding: 0 2rem 2rem;
+  padding-bottom: 4rem;
 }
 
 .mobile-content {
