@@ -342,6 +342,10 @@ html, body {
   .mobile-content { display: none !important; }
   .mobile-content.active { display: block !important; }
   .release-image { width: 100%; height: auto; }
+
+  .release-title {
+  padding-bottom: 0;
+}
 }
 
 .about-section-value a {
