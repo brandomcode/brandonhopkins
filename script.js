@@ -98,7 +98,7 @@ const data = {
       ],
       support: null,
       credits: null,
-      score: true,
+      score: null,
       audioFile: null
     },
      {
@@ -192,7 +192,7 @@ const data = {
       tracklist: [
         { title: "For Amusement Only", duration: "01:40" }
       ],
-      performanceNote: "My first field recording. Made with a portable recorder across several arcades, searching for moments of music in the noise.",
+      performanceNote: "Made with a portable recorder across several arcades, searching for moments of music in the noise.",
       performanceLabel: "Note",
       listen: [
         { label: "SoundCloud", url: "https://soundcloud.com/brandon_hopkins/for-amusement-only" }
@@ -214,7 +214,7 @@ const data = {
       tracklist: [
         { title: "Processor", duration: "04:57" }
       ],
-      performanceNote: "My first time recording with an analog synth (the Moog Mother-32). Special thanks to Kyle Dixon for the recs.",
+      performanceNote: "For Moog Mother-32. Special thanks to Kyle Dixon.",
       performanceLabel: "Note",
       listen: [
         { label: "SoundCloud", url: "https://soundcloud.com/brandon_hopkins/processor" }
