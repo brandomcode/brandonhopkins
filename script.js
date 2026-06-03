@@ -10,7 +10,7 @@ const data = {
     ],
     follow: [
       { label: "Instagram", url: "https://www.instagram.com/brandonhopkins_/" },
-      { label: "YouTube", url: "https://www.youtube.com/@brandonlhopkins" }
+      { label: "YouTube", url: "https://www.youtube.com/@brandon_hopkins" }
     ],
     license: [
       { label: "Music Vine", url: "https://musicvine.com/browse/artist/brandon-hopkins" },
@@ -27,25 +27,24 @@ const data = {
   },
   releases: [
     {
-      id: "keyboard-study-1",
-      title: "Keyboard Study No. 1",
-      subtitle: null,
-      type: "Single",
-      date: "29 March 2026",
-      totalDuration: "00:42",
-      image: "keyboard-study-1.png",
+      id: "three-commutes",
+      title: "Three Commutes",
+      subtitle: "Piano Quintet No. 1",
+      type: "EP",
+      date: "3 July 2026",
+      totalDuration: "10:38",
+      image: "three-commutes.png",
       tracklist: [
-        { title: "Keyboard Study No. 1", duration: "00:42" }
+        { title: "Three Commutes: I. Tube", duration: "03:36" },
+        { title: "Three Commutes: II. Bus", duration: "03:26" },
+        { title: "Three Commutes: III. Bike", duration: "03:36" }
       ],
-      performanceNote: "For iPhone Keyboard",
+      performanceNote: "Composed to mark the 26th anniversary of Transport for London (TfL). </br></br> Written for piano quintet (piano, two violins, viola, and cello) and fixed media. </br></br>Composed between March 10 and April 26, 2026. </br></br>Recorded at Sutton House, London.",
       performanceLabel: "Note",
-      listen: [
-      { label: "SoundCloud", url: "https://on.soundcloud.com/6RiD1jn1A3B3yxJ4BC" },
-      { label: "YouTube", url: "https://www.youtube.com/shorts/Ir69jAb6qGI" }
-      ],
+      listen: null,
       license: null,
       support: [
-        { label: "Bandcamp", url: "https://hopkinsbrandon.bandcamp.com/track/keyboard-study-no-1" }
+        { label: "Bandcamp", url: "https://hopkinsbrandon.bandcamp.com/album/three-commutes" }
       ],
       credits: null,
       score: null,
@@ -101,7 +100,7 @@ const data = {
       score: null,
       audioFile: null
     },
-     {
+    {
       id: "unapproachable-light",
       title: "Unapproachable Light",
       subtitle: null,
@@ -119,7 +118,7 @@ const data = {
       support: null,
       credits: null,
       score: true,
-      audioFile: null,
+      audioFile: null
     },
     {
       id: "hymn-to-the-holy-trinity",
@@ -299,9 +298,9 @@ const data = {
     },
     {
       id: "press-restart",
-      title: "Press Restart - Music for Games Vol. 2",
-      subtitle: null,
-      type: "Album",
+      title: "Press Restart",
+      subtitle: "Music for Games Vol. 2",
+      type: "EP",
       date: "10 November 2018",
       totalDuration: "10:21",
       image: "mfg2.jpg",
@@ -376,9 +375,9 @@ const data = {
     },
     {
       id: "press-start",
-      title: "Press Start - Music for Games Vol. 1",
-      subtitle: null,
-      type: "Album",
+      title: "Press Start",
+      subtitle: "Music for Games Vol. 1",
+      type: "EP",
       date: "10 October 2018",
       totalDuration: "18:00",
       image: "mfg1.jpg",
@@ -407,9 +406,9 @@ const data = {
     },
     {
       id: "the-restoration",
-      title: "The Restoration - Music for Films Vol. 3",
-      subtitle: null,
-      type: "Album",
+      title: "The Restoration",
+      subtitle: "Music for Films Vol. 3",
+      type: "EP",
       date: "10 September 2018",
       totalDuration: "09:54",
       image: "mff3.jpg",
@@ -437,9 +436,9 @@ const data = {
     },
     {
       id: "her-him-her",
-      title: "Her Him Her - Music for Films Vol. 2",
-      subtitle: null,
-      type: "Album",
+      title: "Her Him Her",
+      subtitle: "Music for Films Vol. 2",
+      type: "EP",
       date: "10 August 2018",
       totalDuration: "08:46",
       image: "mff2.jpg",
@@ -466,9 +465,9 @@ const data = {
     },
     {
       id: "the-fashion",
-      title: "The Fashion - Music for Films Vol. 1",
-      subtitle: null,
-      type: "Album",
+      title: "The Fashion",
+      subtitle: "Music for Films Vol. 1",
+      type: "EP",
       date: "10 July 2018",
       totalDuration: "09:59",
       image: "mff1.jpg",
@@ -496,9 +495,9 @@ const data = {
     },
     {
       id: "mother-is-dead",
-      title: "Mother is Dead - String Quartet No. 1",
-      subtitle: null,
-      type: "Album",
+      title: "Mother is Dead",
+      subtitle: "String Quartet No. 1",
+      type: "EP",
       date: "10 June 2018",
       totalDuration: "09:14",
       image: "sq1.jpg",
@@ -638,8 +637,8 @@ function buildReleaseHTML(r) {
   `).join('');
 
   const metaParts = [];
-  if (r.subtitle) metaParts.push(`<em>${r.subtitle}</em>`);
   metaParts.push(r.type);
+  if (r.subtitle) metaParts.push(`<em>${r.subtitle}</em>`);
   metaParts.push(r.totalDuration);
   metaParts.push(r.date);
 
@@ -712,8 +711,8 @@ function buildNavHTML(isMobile) {
   let html = `<div class="nav-releases">`;
   data.releases.forEach(r => {
     const metaParts = [];
-    if (r.subtitle) metaParts.push(`<em>${r.subtitle}</em>`);
     metaParts.push(r.type);
+    if (r.subtitle) metaParts.push(`<em>${r.subtitle}</em>`);
     metaParts.push(r.totalDuration);
     metaParts.push(r.date);
     html += `<div class="nav-release">
@@ -751,7 +750,7 @@ function setActive(id, isMobile) {
     const mc = document.getElementById('mobileContent');
     mc.innerHTML = getContentHTML(id);
     mc.classList.add('active');
-    window.scrollTo(0, 0); // add this
+    window.scrollTo(0, 0);
   }
 }
 
