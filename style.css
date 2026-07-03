@@ -194,7 +194,8 @@ html, body {
 
 .release-section-label {
   font-size: 1rem;
-  color: var(--grey);
+  color: var(--black);
+  font-weight: bold;
   font-family: 'Helvetica Now Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   margin-bottom: var(--spacing-sm);
 }
@@ -267,7 +268,8 @@ html, body {
 
 .about-section-label {
   font-size: 1rem;
-  color: var(--grey);
+  color: var(--black);
+  font-weight: bold;
   font-family: 'Helvetica Now Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   margin-bottom: var(--spacing-sm);
 }

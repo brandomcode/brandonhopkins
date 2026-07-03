@@ -6,7 +6,9 @@ const data = {
     listen: [
       { label: "Spotify", url: "https://open.spotify.com/artist/6C8OQhTzwo2d9NkJ99exZE" },
       { label: "Apple Music", url: "https://music.apple.com/ca/artist/brandon-hopkins/1456625553" },
-      { label: "SoundCloud", url: "https://soundcloud.com/brandon_hopkins" }
+      { label: "Amazon Music", url: "https://www.amazon.it/music/player/artists/B01G14OXK6/brandon-hopkins" },
+      { label: "YouTube Music", url: "https://www.youtube.com/watch?v=SpnArcx8o7w&list=OLAK5uy_lJLl48g0SR-3m_d0eAkWItzPVCRXH5z0I&index=2" },
+      { label: "SoundCloud", url: "https://soundcloud.com/brandon_hopkins" },
     ],
     follow: [
       { label: "Instagram", url: "https://www.instagram.com/brandonhopkins_/" },
@@ -26,6 +28,63 @@ const data = {
     }
   },
   releases: [
+    //   {
+    //   id: "brots-set",
+    //   title: "Brot's Set",
+    //   subtitle: null,
+    //   type: "EP",
+    //   date: "25 September 2026",
+    //   totalDuration: "11:00",
+    //   image: "brots-set.png",
+    //   tracklist: [
+    //     { title: "Brot's Set: I. 120", duration: "04:24" },
+    //     { title: "Brot's Set: II. 80", duration: "06:36" },
+    //   ],
+    //   performanceNote: "<i>Brot's Set</i> celebrates the life and work of Benoît B. Mandelbrot. <br/><br/> Scored for piano, violin, cello, and drum set. <br/><br/> Composed between 08-14 March 2026.",
+    //   performanceLabel: "Note",
+    //   listen: [
+    //     { label: "Spotify", url: "https://open.spotify.com/album/three-commutes" },
+    //     { label: "Apple Music", url: "https://music.apple.com/album/three-commutes" },
+    //     { label: "YouTube Music", url: "https://music.youtube.com/playlist?list=three-commutes" },
+    //     { label: "SoundCloud", url: "https://soundcloud.com/brandon_hopkins/sets/three-commutes" },
+    //     { label: "Amazon Music", url: "https://music.amazon.com/albums/three-commutes" }
+    //   ],
+    //   license: null,
+    //   support: [
+    //     { label: "Bandcamp", url: "https://hopkinsbrandon.bandcamp.com/album/three-commutes" }
+    //   ],
+    //   credits: null,
+    //   score: true,
+    //   audioFile: null
+    // },
+    //  {
+    //   id: "wayleave",
+    //   title: "Wayleave",
+    //   subtitle: null,
+    //   type: "Single",
+    //   date: "14 August 2026",
+    //   totalDuration: "07:21",
+    //   image: "wayleave.png",
+    //   tracklist: [
+    //     { title: "Wayleave", duration: "07:21" },
+    //   ],
+    //   performanceNote: "<i>Wayleave</i> is a pastoral of Britain's transmission infrastructure, reflecting on pylons, overhead lines, and substations as enduring features of the contemporary landscape. <br/><br/> Scored for string orchestra (9 violins, 3 violas, and 3 cellos). <br/><br/> Composed between 10-15 March 2026.",
+    //   performanceLabel: "Note",
+    //   listen: [
+    //     { label: "Spotify", url: "https://open.spotify.com/album/three-commutes" },
+    //     { label: "Apple Music", url: "https://music.apple.com/album/three-commutes" },
+    //     { label: "YouTube Music", url: "https://music.youtube.com/playlist?list=three-commutes" },
+    //     { label: "SoundCloud", url: "https://soundcloud.com/brandon_hopkins/sets/three-commutes" },
+    //     { label: "Amazon Music", url: "https://music.amazon.com/albums/three-commutes" }
+    //   ],
+    //   license: null,
+    //   support: [
+    //     { label: "Bandcamp", url: "https://hopkinsbrandon.bandcamp.com/album/three-commutes" }
+    //   ],
+    //   credits: null,
+    //   score: true,
+    //   audioFile: null
+    // },
     {
       id: "three-commutes",
       title: "Three Commutes",
@@ -39,16 +98,21 @@ const data = {
         { title: "Three Commutes: II. Bus", duration: "03:26" },
         { title: "Three Commutes: III. Bike", duration: "03:36" }
       ],
-      performanceNote: "Composed to mark the 26th anniversary of Transport for London (TfL). </br></br> Written for piano quintet (piano, two violins, viola, and cello) and fixed media. </br></br>Composed between March 10 and April 26, 2026. </br></br>Recorded at Sutton House, London.",
+      performanceNote: "Created to mark the 26th anniversary of Transport for London (TfL). </br></br> Scored for piano quintet (piano, two violins, viola, and cello) and fixed media. </br></br>Composed between March 10 and April 26, 2026. </br></br>Recorded at Sutton House, London.",
       performanceLabel: "Note",
-      listen: null,
+      listen: [
+        { label: "Spotify", url: "https://open.spotify.com/album/0WMvIseHZDDBFUKayoM2me" },
+        { label: "Apple Music", url: "https://music.apple.com/gb/album/three-commutes-single/6769043484" },
+        { label: "Amazon Music", url: "https://www.amazon.it/-/en/dp/B0H1N3ZT5W" },
+        { label: "YouTube Music", url: "https://www.youtube.com/watch?v=SpnArcx8o7w&list=OLAK5uy_lJLl48g0SR-3m_d0eAkWItzPVCRXH5z0I&index=2" },
+        { label: "SoundCloud", url: "https://soundcloud.com/brandon_hopkins" },
+      ],
       license: null,
       support: [
         { label: "Bandcamp", url: "https://hopkinsbrandon.bandcamp.com/album/three-commutes" }
       ],
       credits: null,
-      score: null,
-      audioFile: null
+      score: { label: "Score & Fixed Media", url: "https://hopkinsbrandon.bandcamp.com/merch/score-fixed-media-2" },      audioFile: null
     },
     {
       id: "near-term",
@@ -688,9 +752,12 @@ function buildReleaseHTML(r) {
 
     ${r.score ? `
     <div class="release-section">
-      <p class="release-section-label">Score</p>
+      <p class="release-section-label">${typeof r.score === 'object' ? r.score.label : 'Score'}</p>
       <div class="link-list">
-        <a href="mailto:${data.about.scores.email}?subject=${encodeURIComponent(data.about.scores.subject)}">Email</a>
+        ${typeof r.score === 'object'
+          ? `<a href="${r.score.url}" target="_blank" rel="noopener noreferrer">Download</a>`
+          : `<a href="mailto:${data.about.scores.email}?subject=${encodeURIComponent(data.about.scores.subject)}">Email</a>`
+        }
       </div>
     </div>` : ''}
 
