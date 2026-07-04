@@ -7,7 +7,7 @@ const data = {
       { label: "Spotify", url: "https://open.spotify.com/artist/6C8OQhTzwo2d9NkJ99exZE" },
       { label: "Apple Music", url: "https://music.apple.com/ca/artist/brandon-hopkins/1456625553" },
       { label: "Amazon Music", url: "https://www.amazon.it/music/player/artists/B01G14OXK6/brandon-hopkins" },
-      { label: "YouTube Music", url: "https://music.youtube.com/playlist?list=OLAK5uy_nsiY7I4Bnx53nJfG_fjTSOs5vlp0KmVak&si=c8FMx8lHmVobp2UZ" },
+      { label: "YouTube Music", url: "https://music.youtube.com/playlist?list=OLAK5uy_nsiY7I4Bnx53nJfG_fjTSOs5vlp0KmVak&si=QSxvYl81vOUIwYVQ" },
       { label: "SoundCloud", url: "https://soundcloud.com/brandon_hopkins" },
     ],
     follow: [
@@ -104,7 +104,7 @@ const data = {
         { label: "Spotify", url: "https://open.spotify.com/album/0WMvIseHZDDBFUKayoM2me" },
         { label: "Apple Music", url: "https://music.apple.com/gb/album/three-commutes-single/6769043484" },
         { label: "Amazon Music", url: "https://www.amazon.it/-/en/dp/B0H1N3ZT5W" },
-        { label: "YouTube Music", url: "https://music.youtube.com/playlist?list=OLAK5uy_nsiY7I4Bnx53nJfG_fjTSOs5vlp0KmVak&si=LjY3Aw-78vtzG15T" }
+        { label: "YouTube Music", url: "https://music.youtube.com/playlist?list=OLAK5uy_nsiY7I4Bnx53nJfG_fjTSOs5vlp0KmVak&si=QSxvYl81vOUIwYVQ" }
         // { label: "SoundCloud", url: "https://soundcloud.com/brandon_hopkins" },
       ],
       license: null,
