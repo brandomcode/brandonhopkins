@@ -653,7 +653,7 @@ function seekAudio(e, id) {
 function buildAboutHTML() {
   const a = data.about;
   return `
-    <img class="release-image" src="brandon.png" alt="Brandon Hopkins">
+    <img class="about-image" src="brandon2.png" alt="Brandon Hopkins">
     <div class="about-bio">
       ${a.bio.map(p => `<p>${p}</p>`).join('')}
     </div>
@@ -836,7 +836,7 @@ function attachTitleEvents() {
       activeId = 'about';
       if (currentAudio) { currentAudio.pause(); currentAudio = null; }
       const favicon = document.getElementById('favicon');
-      favicon.href = 'favicon.png?v=' + Date.now();
+      favicon.href = data.releases[0].image + '?v=' + Date.now();
       document.getElementById('desktopNav').innerHTML = buildNavHTML(false);
       document.getElementById('rightColInner').innerHTML = getContentHTML('about');
       attachNavEvents(false);
@@ -854,6 +854,10 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('rightColInner').innerHTML = getContentHTML('about');
   document.getElementById('mobileNav').innerHTML = buildNavHTML(true);
   document.getElementById('mobileContent').innerHTML = getContentHTML('about');
+
+  const favicon = document.getElementById('favicon');
+  favicon.href = data.releases[0].image + '?v=' + Date.now();
+
   attachNavEvents(false);
   attachNavEvents(true);
   attachTitleEvents();

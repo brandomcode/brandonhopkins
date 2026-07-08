@@ -188,6 +188,15 @@ html, body {
   margin-bottom: var(--spacing-lg);
 }
 
+.about-image {
+  width: var(--col-width);
+  height: calc(var(--col-width) * 3 / 2);
+  object-fit: cover;
+  display: block;
+  margin-bottom: var(--spacing-lg);
+  border: 1px solid #e0e0e0;
+}
+
 .release-section {
   margin-bottom: 2rem;
 }
@@ -339,15 +348,15 @@ html, body {
 
 @media (max-width: 1151px) {
   html, body { overflow: auto; height: auto; }
-  .layout { display: none; }
-  .mobile-header { display: flex; }
-  .mobile-content { display: none !important; }
-  .mobile-content.active { display: block !important; }
-  .release-image { width: 100%; height: auto; }
+    .layout { display: none; }
+    .mobile-header { display: flex; }
+    .mobile-content { display: none !important; }
+    .mobile-content.active { display: block !important; }
+    .release-image, .about-image { width: 100%; height: auto; }
 
-  .release-title {
-  padding-bottom: 0;
-}
+    .release-title {
+      padding-bottom: 0;
+  }
 }
 
 .about-section-value a {
