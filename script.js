@@ -104,8 +104,8 @@ const data = {
         { label: "Spotify", url: "https://open.spotify.com/album/0WMvIseHZDDBFUKayoM2me" },
         { label: "Apple Music", url: "https://music.apple.com/gb/album/three-commutes-single/6769043484" },
         { label: "Amazon Music", url: "https://www.amazon.it/-/en/dp/B0H1N3ZT5W" },
-        { label: "YouTube Music", url: "https://music.youtube.com/playlist?list=OLAK5uy_nsiY7I4Bnx53nJfG_fjTSOs5vlp0KmVak&si=QSxvYl81vOUIwYVQ" }
-        // { label: "SoundCloud", url: "https://soundcloud.com/brandon_hopkins" },
+        { label: "YouTube Music", url: "https://music.youtube.com/playlist?list=OLAK5uy_nsiY7I4Bnx53nJfG_fjTSOs5vlp0KmVak&si=QSxvYl81vOUIwYVQ" },
+        { label: "SoundCloud", url: "https://soundcloud.com/brandon_hopkins/sets/three-commutes" },
       ],
       license: null,
       support: [
