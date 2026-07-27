@@ -1,60 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brandon Hopkins</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light">
+<title>Brandon Hopkins</title>
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png" id="favicon">
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="favicon.png" id="favicon">
 
-  <!-- SEO -->
-  <meta name="description" content="Brandon Hopkins (b. 1997) is a British composer based in London, England.">
-  <meta name="keywords" content="Brandon Hopkins, composer, British composer, London, contemporary classical, classical music, experimental, minimalist, soundtrack, music">
+<!-- SEO -->
+<meta name="description" content="Brandon Hopkins (b. 1997) is a British composer based in London, England.">
+<meta name="keywords" content="Brandon Hopkins, composer, British composer, London, contemporary classical, classical music, experimental, minimalist, soundtrack, music">
 
-  <!-- OG -->
-  <meta property="og:title" content="Brandon Hopkins">
-  <meta property="og:description" content="British composer based in London.">
-  <meta property="og:image" content="https://brandonhopkins.co.uk/og-image.png">
-  <meta property="og:url" content="https://brandonhopkins.co.uk">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
+<!-- OG -->
+<meta property="og:title" content="Brandon Hopkins">
+<meta property="og:description" content="British composer based in London.">
+<meta property="og:image" content="https://brandonhopkins.co.uk/og-image.png">
+<meta property="og:url" content="https://brandonhopkins.co.uk">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
 
-  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
+
+<!-- PREVIOUS DESIGN: rename the old files to style.legacy.css / script.legacy.js,
+     then swap the live tag for these to revert.
+<link rel="stylesheet" href="style.legacy.css">
+<script src="script.legacy.js"></script>
+-->
 </head>
 <body>
 
-  <!-- MOBILE HEADER -->
-  <header class="mobile-header">
-    <span class="mobile-title">Brandon Hopkins</span>
-    <button class="menu-btn" id="menuBtn">Menu</button>
-  </header>
+<main class="page">
 
-  <!-- MOBILE MENU OVERLAY -->
-  <div class="mobile-menu" id="mobileMenu">
-    <div class="mobile-menu-header">
-      <span class="mobile-title">Brandon Hopkins</span>
-      <button class="menu-btn" id="closeBtn">Close</button>
-    </div>
-    <nav id="mobileNav"></nav>
-  </div>
+  <p class="bio">
+    <strong>Brandon Hopkins</strong> (b. 1997) is a British composer based in London. He writes contemporary classical music, drawing on the minimalism of Steve Reich and Philip Glass, and the experimentalism of John Cage and Aphex Twin. His work has been featured in films, video games, and installations. <br /> <br/>You can listen to his music on
+    <a href="https://open.spotify.com/artist/6C8OQhTzwo2d9NkJ99exZE" target="_blank" rel="noopener noreferrer">Spotify</a>,
+    <a href="https://music.apple.com/ca/artist/brandon-hopkins/1456625553" target="_blank" rel="noopener noreferrer">Apple Music</a>,
+    <a href="https://www.amazon.it/music/player/artists/B01G14OXK6/brandon-hopkins" target="_blank" rel="noopener noreferrer">Amazon Music</a>,
+    <a href="https://music.youtube.com/playlist?list=OLAK5uy_nsiY7I4Bnx53nJfG_fjTSOs5vlp0KmVak&amp;si=QSxvYl81vOUIwYVQ" target="_blank" rel="noopener noreferrer">YouTube Music</a>,
+    <a href="https://soundcloud.com/brandon_hopkins" target="_blank" rel="noopener noreferrer">SoundCloud</a>,
+    and more. You can follow him on
+    <a href="https://www.instagram.com/brandonhopkins_/" target="_blank" rel="noopener noreferrer">Instagram</a>, and
+    <a href="https://www.youtube.com/@brandon_hopkins" target="_blank" rel="noopener noreferrer">YouTube</a>.
+    You can support his work on
+    <a href="https://hopkinsbrandon.bandcamp.com/" target="_blank" rel="noopener noreferrer">Bandcamp</a>.
+    For licensing, visit
+    <a href="https://musicvine.com/browse/artist/brandon-hopkins" target="_blank" rel="noopener noreferrer">Music Vine</a>, or
+    <a href="https://uppbeat.io/browse/artist/brandon-hopkins" target="_blank" rel="noopener noreferrer">Uppbeat</a>.
+    For all other enquiries, send him an
+    <a href="mailto:brandon@brandonhopkins.co.uk">email</a>.
+  </p>
 
-  <!-- MOBILE CONTENT -->
-  <main class="mobile-content active" id="mobileContent"></main>
+  <footer class="footer">
+    <p>&copy; &amp; &#8471; 2026 Brandon Hopkins.<br>All rights reserved.</p>
+  </footer>
 
-  <!-- DESKTOP LAYOUT -->
-  <div class="layout">
-    <div class="col" id="leftCol">
-      <div class="col-inner">
-        <h1 class="site-title">Brandon Hopkins</h1>
-        <nav id="desktopNav"></nav>
-      </div>
-    </div>
-    <div class="col" id="rightCol">
-      <div class="col-inner" id="rightColInner"></div>
-    </div>
-  </div>
+</main>
 
-  <script src="script.js"></script>
+<!-- PREVIOUS DESIGN MARKUP (mobile header / mobile menu / mobile content / two-column
+     desktop layout) lives in index.legacy.html. It can't be commented out inline here
+     because it already contains HTML comments, and HTML comments don't nest. -->
+
 </body>
 </html>
