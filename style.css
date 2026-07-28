@@ -101,5 +101,6 @@ outline-offset: 4px;
 :root {
 --margin: var(--margin-small);
 --margin-y: var(--margin-small);
+--text: 1rem;
   }
 }
