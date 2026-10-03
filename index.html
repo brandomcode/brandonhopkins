@@ -30,7 +30,25 @@
   <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image">
 
+  <!-- Material Symbols — subset to the one icon we use (arrow_outward, U+F8CE) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_outward&display=block"
+  >
+
   <link rel="stylesheet" href="style.css">
+
+  <!-- Hide the bio until script.js has set up the typing effect, so it
+       never flashes in fully first. Skipped entirely for reduced motion,
+       and without JS the text simply shows as normal. -->
+  <script>
+    if (!(window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches)) {
+      document.documentElement.classList.add("will-stream");
+    }
+  </script>
+  <script src="script.js" defer></script>
 
   <!--
     PREVIOUS DESIGN:
@@ -46,81 +64,82 @@
 
   <main class="page">
 
-    <p class="bio">
-      <strong>Brandon Hopkins</strong> (b. 1997) is a British composer based in London. He writes contemporary classical music, drawing on the minimalism of Steve Reich, Philip Glass, John Tavener, and Arvo Pärt. His work has been featured in films, video games, and installations.
-    </p>
-<br />
-<br />
-    <p class="bio">
-      You can listen to his music on
-      <a
-        href="https://open.spotify.com/artist/6C8OQhTzwo2d9NkJ99exZE"
-        target="_blank"
-        rel="noopener noreferrer"
-      >Spotify</a>,
-      <a
-        href="https://music.apple.com/ca/artist/brandon-hopkins/1456625553"
-        target="_blank"
-        rel="noopener noreferrer"
-      >Apple Music</a>,
-      <a
-        href="https://www.amazon.it/music/player/artists/B01G14OXK6/brandon-hopkins"
-        target="_blank"
-        rel="noopener noreferrer"
-      >Amazon Music</a>,
-      <a
-        href="https://music.youtube.com/playlist?list=OLAK5uy_nsiY7I4Bnx53nJfG_fjTSOs5vlp0KmVak&amp;si=QSxvYl81vOUIwYVQ"
-        target="_blank"
-        rel="noopener noreferrer"
-      >YouTube Music</a>,
-      <a
-        href="https://soundcloud.com/brandon_hopkins"
-        target="_blank"
-        rel="noopener noreferrer"
-      >SoundCloud</a>,
-      and more.
+    <!-- Left column: bio, links, copyright -->
+    <div class="content">
 
-      You can follow him on
-      <a
-        href="https://www.instagram.com/brandonhopkins_/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >Instagram</a>,
-      and
-      <a
-        href="https://www.youtube.com/@brandon_hopkins"
-        target="_blank"
-        rel="noopener noreferrer"
-      >YouTube</a>.
+      <article class="message">
+        <div class="stream">
+          <p><strong>Brandon Hopkins</strong> (b. 1997) is a British composer based in London, England. Self-taught from the age of twelve, his work is rooted in minimalism and process-based composition, and shaped by interests in systems thinking, design, and computer science.</p>
 
-      You can support his work on
-      <a
-        href="https://hopkinsbrandon.bandcamp.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >Bandcamp</a>.
+          <p>His music is often constructed through clearly defined rules and processes, employing repetition, addition, subtraction, mirroring, permutation, and gradual transformation as structural devices. <strong>Hopkins</strong> is interested in formal rigour without allowing structure to become an end in itself; harmony, sonority, pacing, expression, and the experience of both listening to and performing the music remain central to the compositional process.</p>
 
-      For licensing, visit
-      <a
-        href="https://musicvine.com/browse/artist/brandon-hopkins"
-        target="_blank"
-        rel="noopener noreferrer"
-      >Music Vine</a>,
-      or
-      <a
-        href="https://uppbeat.io/browse/artist/brandon-hopkins"
-        target="_blank"
-        rel="noopener noreferrer"
-      >Uppbeat</a>.
+          <p>His compositions frequently take real-world subjects as their point of departure, drawing on people, places, and things as sources of musical structure and material. These subjects often extend beyond the conceptual premise of a work, informing its underlying processes, proportions, and musical behaviour.</p>
 
-      For all other enquiries, send him an
-      <a href="mailto:brandon@brandonhopkins.co.uk">email</a>.
-    </p>
+          <p><strong>Hopkins’</strong> music has been compared with that of Steve Reich, Philip Glass, John Tavener, and Arvo Pärt. His work has been performed internationally and has appeared in film, video games, installations, and advertising. Recent performances include the London Festival of Contemporary Church Music, with a forthcoming performance in Tokyo.</p>
+        </div>
+      </article>
 
-    <footer class="footer">
-      <p>&#8471; &amp; &copy; 2026 Brandon Hopkins.</p>
-      All rights reserved.
-    </footer>
+      <nav class="links" aria-label="Elsewhere">
+
+        <section class="group">
+          <h2>Listen</h2>
+          <ul>
+            <li><a href="https://open.spotify.com/artist/6C8OQhTzwo2d9NkJ99exZE" target="_blank" rel="noopener noreferrer">Spotify</a></li>
+            <li><a href="https://music.apple.com/ca/artist/brandon-hopkins/1456625553" target="_blank" rel="noopener noreferrer">Apple Music</a></li>
+            <li><a href="https://music.youtube.com/playlist?list=OLAK5uy_nsiY7I4Bnx53nJfG_fjTSOs5vlp0KmVak&amp;si=QSxvYl81vOUIwYVQ" target="_blank" rel="noopener noreferrer">YouTube Music</a></li>
+            <li><a href="https://www.amazon.it/music/player/artists/B01G14OXK6/brandon-hopkins" target="_blank" rel="noopener noreferrer">Amazon Music</a></li>
+            <li><a href="https://soundcloud.com/brandon_hopkins" target="_blank" rel="noopener noreferrer">SoundCloud</a></li>
+          </ul>
+        </section>
+
+        <section class="group">
+          <h2>Follow</h2>
+          <ul>
+            <li><a href="https://www.instagram.com/brandonhopkins_/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="https://www.linkedin.com/in/brandonhopkins-/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="https://www.youtube.com/@brandon_hopkins" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+          </ul>
+        </section>
+
+        <section class="group">
+          <h2>Support</h2>
+          <ul>
+            <li><a href="https://hopkinsbrandon.bandcamp.com/" target="_blank" rel="noopener noreferrer">Bandcamp</a></li>
+          </ul>
+        </section>
+
+        <section class="group">
+          <h2>Licensing</h2>
+          <ul>
+            <li><a href="https://musicvine.com/browse/artist/brandon-hopkins" target="_blank" rel="noopener noreferrer">MusicVine</a></li>
+            <li><a href="https://uppbeat.io/browse/artist/brandon-hopkins" target="_blank" rel="noopener noreferrer">Uppbeat</a></li>
+          </ul>
+        </section>
+
+        <section class="group">
+          <h2>Contact</h2>
+          <ul>
+            <li><a href="mailto:brandon@brandonhopkins.co.uk">Email</a></li>
+          </ul>
+        </section>
+
+      </nav>
+
+      <footer class="footer">
+        <p class="copyright">&copy; &amp; &#8471; 2026 Brandon Hopkins. All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <!-- Right column on desktop, first on mobile -->
+    <figure class="portrait">
+      <img
+        src="brandon2.jpg"
+        alt="Brandon Hopkins seated at a grand piano with the lid open"
+        width="400"
+        height="604"
+      >
+    </figure>
 
   </main>
 

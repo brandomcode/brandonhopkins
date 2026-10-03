@@ -7,27 +7,37 @@
 
 /* ── FONTS ── */
 @font-face {
-font-family: 'Helvetica Now Display';
-src: url('fonts/HelveticaNowDisplay.otf') format('opentype');
-font-weight: 400;
-font-style: normal;
-font-display: swap;
+  font-family: 'Helvetica Now Display';
+  src: url('fonts/HelveticaNowDisplay.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-font-family: 'Helvetica Now Display';
-src: url('fonts/HelveticaNowDisplayBold.otf') format('opentype');
-font-weight: 700;
-font-style: normal;
-font-display: swap;
+  font-family: 'Helvetica Now Display';
+  src: url('fonts/HelveticaNowDisplayBold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-font-family: 'Helvetica Now Display';
-src: url('fonts/HelveticaNowDisplayIt.otf') format('opentype');
-font-weight: 400;
-font-style: italic;
-font-display: swap;
+  font-family: 'Helvetica Now Display';
+  src: url('fonts/HelveticaNowDisplayIt.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Copyright line only. Make the file name below match the
+   Micro Cn file in your fonts/ folder exactly (case-sensitive). */
+@font-face {
+  font-family: 'Helvetica Now Micro Cn';
+  src: url('fonts/HelveticaNowMicroCn.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
 /* ── RESET ── */
@@ -35,72 +45,185 @@ font-display: swap;
 
 /* ── TOKENS ── */
 :root {
---bg: #ffffff;
---fg: #000000;
-color-scheme: light;
+  --bg: #ffffff;
+  --fg: #000000;
+  color-scheme: light;
 
---margin: 16rem;          /* 256px — left/right site margin on desktop */
---margin-y: 4rem;         /* 64px  — top/bottom site margin on desktop */
---margin-small: 2rem;     /* 32px  — site margin on narrow screens */
+  --col: 25rem;             /* 400px — text column and image width */
+  --photo-h: 37.75rem;      /* 604px — image height on desktop */
+  --gap: 8rem;              /* 128px — space between the two columns */
+  --pad-y: 8rem;            /* 128px — top/bottom */
+  --pad-x: 2rem;            /* minimum side padding; centring does the rest */
 
---text: 1.5rem;           /* the only text size on the site */
+  --text: 1rem;
+  --small: 0.75rem;         /* 12px — copyright */
+  --leading: 1.5;
+
+  --sans: 'Helvetica Now Display', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --micro: 'Helvetica Now Micro Cn', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 /* ── PAGE ── */
 html { -webkit-text-size-adjust: 100%; }
 
 body {
-background: var(--bg);
-color: var(--fg);
-font-family: 'Helvetica Now Display', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-font-size: var(--text);
-font-weight: 400;
-line-height: 1.35;
--webkit-font-smoothing: antialiased;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--sans);
+  font-size: var(--text);
+  font-weight: 400;
+  line-height: var(--leading);
+  -webkit-font-smoothing: antialiased;
 }
 
+/* Two fixed 400px columns, 128px apart, centred.
+   At 1440px wide that leaves exactly 256px either side. */
 .page {
-min-height: 100vh;
-min-height: 100dvh;
-padding: var(--margin-y) var(--margin);
-display: flex;
-flex-direction: column;
+  display: grid;
+  grid-template-columns: var(--col) var(--col);
+  justify-content: center;
+  align-items: start;
+  column-gap: var(--gap);
+  padding: var(--pad-y) var(--pad-x);
+}
+
+/* ── IMAGE ── */
+/* Stays in view while the text column scrolls past it */
+.portrait {
+  position: sticky;
+  top: var(--pad-y);
+}
+
+.portrait img {
+  display: block;
+  width: 100%;
+  height: var(--photo-h);
+  object-fit: cover;
 }
 
 /* ── BIO ── */
-.bio strong {
-font-weight: 700;
+strong {
+  font-weight: 700;
 }
 
-/* ── FOOTER ── */
-.footer {
-margin-top: auto;         /* sits at the bottom of the viewport */
-padding-top: var(--margin-small);
+.stream p + p {
+  margin-top: 1rem;
+}
+
+/* ── TYPING ── */
+/* Hidden until script.js has wrapped the words (see the inline script in <head>) */
+.will-stream .content:not(.is-streaming):not(.is-done) {
+  visibility: hidden;
+}
+
+/* While streaming, anything not yet revealed takes up no space at all,
+   so the page only grows (and only scrolls) as far as what's been written. */
+.content.is-streaming .pending,
+.content.is-streaming .w:not(.in) {
+  display: none;
+}
+
+/* Each word, and each link with its arrow, fades up once as it appears */
+.content.is-streaming .w.in,
+.content.is-streaming li {
+  animation: word-in 180ms ease-out both;
+}
+
+@keyframes word-in {
+  from { opacity: 0; }
 }
 
 /* ── LINKS ── */
+.links {
+  margin-top: 2rem;         /* last paragraph → first header */
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;                /* between each header + its links */
+}
+
+.group h2 {
+  font-size: inherit;
+  font-weight: 700;
+  line-height: inherit;
+  margin-bottom: 0.5rem;    /* header → links */
+}
+
+.group ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;              /* between links, and between wrapped rows */
+}
+
+.group li {
+  white-space: nowrap;      /* keep each label with its arrow */
+}
+
 a {
-color: var(--fg);
-text-decoration: underline;
-text-underline-offset: 0.15em;
-text-decoration-thickness: from-font;
+  color: var(--fg);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  text-decoration-thickness: from-font;
 }
 
 a:hover {
-text-decoration: none;
+  text-decoration: none;
 }
 
 a:focus-visible {
-outline: 2px solid var(--fg);
-outline-offset: 4px;
+  outline: 2px solid var(--fg);
+  outline-offset: 4px;
 }
 
-/* ── NARROW SCREENS ── */
-/* margin only — type size never changes */
-@media (max-width: 900px) {
-:root {
---margin: var(--margin-small);
---margin-y: var(--margin-small);
---text: 1rem;
+/* Material Symbols "arrow_outward" (U+F8CE), 1rem × 1rem.
+   inline-block keeps it out of the link's underline. */
+.links a::after {
+  content: "arrow_outward";
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  margin-left: 0.25rem;
+  overflow: hidden;
+  vertical-align: -0.125em;
+
+  font-family: 'Material Symbols Outlined';
+  font-size: 1rem;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  white-space: nowrap;
+  direction: ltr;
+  font-feature-settings: 'liga';
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+}
+
+/* ── COPYRIGHT ── */
+.copyright {
+  margin-top: 2rem;
+  font-family: var(--micro);
+  font-size: var(--small);
+}
+
+/* ── MOBILE ── */
+/* Below 62rem the two columns (58rem) plus 2rem padding no longer fit */
+@media (max-width: 62rem) {
+  :root {
+    --pad-y: 2rem;
+  }
+
+  .page {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 2rem;          /* image → text */
+  }
+
+  .portrait {
+    position: static;
+    order: -1;              /* image first */
+  }
+
+  .portrait img {
+    height: auto;           /* keep the photo's own proportions */
   }
 }
